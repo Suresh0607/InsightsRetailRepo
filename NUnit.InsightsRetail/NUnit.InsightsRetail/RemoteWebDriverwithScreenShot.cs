@@ -19,20 +19,15 @@ namespace NUnit.InsightsRetail
 
     public class RemoteWebDriverwithScreenShot 
     {
-         private ScreenShotRemoteWebDriver threadDriver;
-         //private String host, port, _platform, _DisableProxy, _browserType, _chromeDriverPath, _fileDowload_path;
-         string _host = "10.10.10.74";
-         string _port = "4444";
-         EventFiringWebDriver eveDriver = null;
+        private ScreenShotRemoteWebDriver threadDriver;
+        string _host = "10.10.10.74";
+        string _port = "4444";
+        EventFiringWebDriver eveDriver = null;
                     
-        public IWebDriver LaunchBrowser(TestContext ctx)
+        public IWebDriver LaunchBrowser()
         {
-
             ChromeOptions options = new ChromeOptions();
-            options.AddAdditionalCapability("username", "Partner_ZZZZ", true);
-            options.AddAdditionalCapability("accessKey", "ZZZZ", true);
-                                          
-            threadDriver = new ScreenShotRemoteWebDriver(new Uri("http://" + _host + ":" + _port + "/wd/hub"), options.ToCapabilities());
+            threadDriver = new ScreenShotRemoteWebDriver(new Uri("http://" + _host + ":" + _port + "/wd/hub"), options);
             eveDriver = new MyEventFiringWebDriver(threadDriver);
             return eveDriver;
         }

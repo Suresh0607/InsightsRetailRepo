@@ -13,8 +13,8 @@ namespace NUnit.InsightsRetail
     {
        // private Uri uri;
 
-        public ScreenShotRemoteWebDriver(Uri remoteAddress, ICapabilities desiredCapabilities)
-        : base(remoteAddress, desiredCapabilities)
+        public ScreenShotRemoteWebDriver(Uri remoteAddress, DriverOptions options)
+        : base(remoteAddress, options)
         {
         }
 

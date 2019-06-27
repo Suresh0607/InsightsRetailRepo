@@ -16,7 +16,7 @@ using OpenQA.Selenium.IE;
 
 namespace NUnit.InsightsRetail 
 {
-    class MyEventFiringWebDriver : EventFiringWebDriver, IHasCapabilities
+    public class MyEventFiringWebDriver : EventFiringWebDriver, IHasCapabilities
     {
 
         private RemoteWebDriver driver;

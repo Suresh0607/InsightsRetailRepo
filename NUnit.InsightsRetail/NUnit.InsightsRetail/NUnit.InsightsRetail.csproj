@@ -68,23 +68,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonTests .cs" />
+    <Compile Include="CommonTestExecute.cs" />
     <Compile Include="MyEventFiringWebDriver.cs" />
     <Compile Include="RemoteWebDriverwithScreenShot.cs" />
     <Compile Include="ScreenShotRemoteWebDriver.cs" />
     <Compile Include="Login_Page.cs" />
-    <Compile Include="Login.feature.cs">
+    <Compile Include="LoginFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Login.feature</DependentUpon>
+      <DependentUpon>LoginFeature.feature</DependentUpon>
     </Compile>
-    <Compile Include="LoginStepDefinition.cs" />
+    <Compile Include="LoginFeatureSteps.cs" />
+    <Compile Include="SpecFlowFeature1Steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Login.feature">
+    <None Include="LoginFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Login.feature.cs</LastGenOutput>
+      <LastGenOutput>LoginFeature.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
